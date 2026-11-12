@@ -1,0 +1,232 @@
+{
+ "type": "FeatureCollection",
+ "bbox": [
+  -77.1011,
+  38.99125,
+  -77.0996,
+  38.99244
+ ],
+ "license": "CC-BY-4.0",
+ "attribution": "USA Structures: Oak Ridge National Laboratory (ORNL) and FEMA Geospatial Response Office",
+ "source": {
+  "name": "USA Structures",
+  "page": "https://gis-fema.hub.arcgis.com/datasets/fedmaps::usa-structures/about",
+  "licence_text": "CC BY 4.0 (licenseInfo of the distributing item, retrieved 2026-11-12)",
+  "retrieved": "2026-11-08"
+ },
+ "note": "Structure footprints whose centroid lies in the bbox, with height and four descriptive fields; addresses, identifiers, population estimates and all other attributes are removed. Heights are as published (some unverified or missing). Coordinates: WGS84 lon/lat.",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "height_m": 17.4,
+    "occupancy_class": "Residential",
+    "source": "NGA",
+    "image_date": "2008-03-12",
+    "validation": "Unverified"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -77.100952,
+       38.9921705
+      ],
+      [
+       -77.1009405,
+       38.9921466
+      ],
+      [
+       -77.1008789,
+       38.9921647
+      ],
+      [
+       -77.1007694,
+       38.9919384
+      ],
+      [
+       -77.1008597,
+       38.9919118
+      ],
+      [
+       -77.1008376,
+       38.991866
+      ],
+      [
+       -77.1007176,
+       38.9916181
+      ],
+      [
+       -77.100904,
+       38.9915632
+      ],
+      [
+       -77.1010298,
+       38.9918232
+      ],
+      [
+       -77.1009402,
+       38.9918496
+      ],
+      [
+       -77.1009565,
+       38.9918832
+      ],
+      [
+       -77.101066,
+       38.9921096
+      ],
+      [
+       -77.1010082,
+       38.9921266
+      ],
+      [
+       -77.1010198,
+       38.9921505
+      ],
+      [
+       -77.100952,
+       38.9921705
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "height_m": null,
+    "occupancy_class": "Unclassified",
+    "source": "ORNL",
+    "image_date": "2019-02-19",
+    "validation": "Automated"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -77.1002069,
+       38.9920035
+      ],
+      [
+       -77.1003779,
+       38.9919946
+      ],
+      [
+       -77.1003958,
+       38.992206
+      ],
+      [
+       -77.1002248,
+       38.9922148
+      ],
+      [
+       -77.1002069,
+       38.9920035
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "height_m": 7.47,
+    "occupancy_class": "Residential",
+    "source": "NGA",
+    "image_date": "2008-03-12",
+    "validation": "Unverified"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -77.0997752,
+       38.99206
+      ],
+      [
+       -77.0997385,
+       38.9918707
+      ],
+      [
+       -77.0997134,
+       38.9918736
+      ],
+      [
+       -77.0996886,
+       38.991746
+      ],
+      [
+       -77.0997961,
+       38.9917333
+      ],
+      [
+       -77.0998576,
+       38.9920503
+      ],
+      [
+       -77.0997752,
+       38.99206
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "height_m": 7.1,
+    "occupancy_class": "Residential",
+    "source": "NGA",
+    "image_date": "2008-03-12",
+    "validation": "Unverified"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -77.0996921,
+       38.9915735
+      ],
+      [
+       -77.0996618,
+       38.9913996
+      ],
+      [
+       -77.0996296,
+       38.991403
+      ],
+      [
+       -77.0996088,
+       38.9912838
+      ],
+      [
+       -77.0997195,
+       38.991272
+      ],
+      [
+       -77.0997937,
+       38.9916979
+      ],
+      [
+       -77.0996873,
+       38.9917092
+      ],
+      [
+       -77.0996642,
+       38.9915764
+      ],
+      [
+       -77.0996921,
+       38.9915735
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -16,6 +16,7 @@
     "method-tests/test_provenance.py",
     "method-tests/test_publication.py",
     "method-tests/test_raster.py",
+    "method-tests/tutorial.mjs",
     "methods/motion.mjs",
     "methods/projection.mjs",
     "methods/provenance.py",
@@ -33,7 +34,41 @@
     "public-skills/methods-only-publication/SKILL.md",
     "public-skills/terrain-map-review/SKILL.md",
     "publication/check.py",
-    "requirements.txt"
+    "requirements.txt",
+    "sample/README.md",
+    "sample/features.geojson",
+    "sample/structures.geojson",
+    "sample/terrain.json",
+    "tutorial/README.md",
+    "tutorial/args.mjs",
+    "tutorial/expected.json",
+    "tutorial/lib.mjs",
+    "tutorial/preview.png",
+    "tutorial/step1-load.mjs",
+    "tutorial/step2-terrain.mjs",
+    "tutorial/step3-buildings.mjs",
+    "tutorial/step4-render.mjs",
+    "tutorial/update-expected.mjs"
   ],
-  "banner_sha256": "157c15181258c91bb863c04bd8a3086f0f603d55c8bbc95126debfb445ad1b41"
+  "binary_sha256": {
+    "assets/banner.png": "157c15181258c91bb863c04bd8a3086f0f603d55c8bbc95126debfb445ad1b41",
+    "tutorial/preview.png": "70e33e32af180a67259666f2500c84ade5cdd68f00c3f71c33e14e8720156547"
+  },
+  "data_files": {
+    "sample/features.geojson": {
+      "sha256": "d8bf9c7c1c0a6305db8ab84a3488762198e3fa7d5c35ee8c512b93364642d52f",
+      "license": "ODbL-1.0",
+      "source": "OpenStreetMap contributors; snapshot 2026-11-09"
+    },
+    "sample/structures.geojson": {
+      "sha256": "f0117545d5c17c481dc9aad5e9db8eeb15e49074bc4c33dc7738e748d78af785",
+      "license": "CC-BY-4.0",
+      "source": "USA Structures (ORNL, FEMA Geospatial Response Office); retrieved 2026-11-08"
+    },
+    "sample/terrain.json": {
+      "sha256": "9082f806f8d8cd842116e2323046eaf784fda8c30c70cd1b99a6faafa415ef56",
+      "license": "public-domain",
+      "source": "USGS 3DEP via the 3DEPElevation image service; retrieved 2026-11-12"
+    }
+  }
 }

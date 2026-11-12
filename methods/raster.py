@@ -23,6 +23,9 @@ def alignment(reference, candidate, mask, max_shift=6, min_pixels=32,
 
     Returned (dy, dx) translates candidate into reference. A proposed shift is
     diagnostic only when accepted is false; do not repair a rejected frame.
+    The margin compares the best score with the next best shift of any kind,
+    which is usually a neighbour of the same peak: smooth imagery can give a
+    small margin even when the peak is right.
     """
     ref, img = np.asarray(reference, float), np.asarray(candidate, float)
     mask = np.asarray(mask, bool)
@@ -79,10 +82,12 @@ def fit_overlap_gain(reference, candidate, mask, limit=.12):
 
 
 def feather_blend(images, weights):
-    """Blend same-sized RGBA arrays with premultiplied alpha and edge weights.
+    """Blend same-sized straight (non-premultiplied) RGBA arrays with edge weights.
 
-    Alpha is the maximum input alpha wherever a nonzero effective weight exists.
-    Place tiles on a common canvas before calling this reference helper.
+    Each pixel's colour contributes with weight x alpha, so transparent pixels
+    contribute nothing and do not darken the result. Alpha is the maximum input
+    alpha wherever a nonzero effective weight exists. Place tiles on a common
+    canvas before calling this reference helper.
     """
     if len(images) == 0 or len(images) != len(weights):
         raise ValueError("images and weights required")

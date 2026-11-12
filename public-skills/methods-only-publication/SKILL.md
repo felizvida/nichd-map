@@ -9,7 +9,7 @@ Use runtime-generated synthetic test inputs. Reference public publisher landing 
 
 Inspect the target's existing refs before preparing history. Preserve legitimate history with a normal fast-forward; do not force-push to resolve an unexpected parent. Inspect every reachable commit for disclosure. Use the account's public no-reply identity rather than an internal email unless the user explicitly requests otherwise.
 
-Export exactly the candidate commit. Compare every path, file mode, blob and hash against the allowlist. Reject symlinks, submodules, archives, data files and unreviewed binaries. Run synthetic tests, content checks and a secret scanner against the export. Automated scans cannot prove that no sensitive semantics remain: review the content independently.
+Export exactly the candidate commit. Compare every path, file mode, blob and hash against the allowlist. Reject symlinks, submodules, archives, unreviewed binaries and data files, except a sample the user explicitly approved, whose licence permits redistribution and which is pinned by hash with its source and attribution. Run synthetic tests, content checks and a secret scanner against the export. Automated scans cannot prove that no sensitive semantics remain: review the content independently.
 
 When the user requires a reviewer, provide the exact commit archive, hash manifest, history, refs, tests, proposed push command and metadata. Obtain the required agreement against that concrete candidate before external publication. If files change, regenerate the evidence and renew the review for the new commit.
 

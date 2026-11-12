@@ -1,6 +1,6 @@
 # Terrain-aware isometric map methods
 
-These implementations generalise engineering techniques from a mapping project. They have no geographic origin, building identifiers, real camera calibration, provider adapter or real-world model parameters.
+These implementations generalise engineering techniques from a mapping project. They have no geographic origin, building identifiers, real camera calibration, provider adapter or real-world model parameters. The [hands-on tutorial](../tutorial/README.md) applies them to a small public-data sample.
 
 ## Terrain before appearance
 
@@ -36,9 +36,9 @@ An image model controls appearance. Its output is not authoritative geometry, te
 
 ## Alignment and overlap checks
 
-`alignment` searches small integer translations using masked Pearson correlation. Supply a stable structural anchor, often a grayscale edge pass. Flat or ambiguous matches fail closed. Direct search suits small patches, not large optical-flow tasks. Appearance changes, repetitive texture, occlusion and deformation can break correlation. Do not apply a rejected shift. Translation cannot repair warped geometry.
+`alignment` searches small integer translations using masked Pearson correlation. Supply a stable structural anchor, often a grayscale edge pass. Flat or ambiguous matches fail closed. The margin is measured against the next best shift of any kind, which is usually an immediate neighbour of the winning shift; a broad, correct peak on smooth imagery therefore gives a small margin. Choose `min_margin` on reviewed examples, or compare against shifts outside the peak's neighbourhood in your own variant. Direct search suits small patches, not large optical-flow tasks. Appearance changes, repetitive texture, occlusion and deformation can break correlation. Do not apply a rejected shift. Translation cannot repair warped geometry.
 
-`translate` zero-fills exposed strips instead of wrapping them. `composite_landscape` selects RGB by a boolean building mask and restores exact alpha. `fit_overlap_gain` fits bounded independent channel gains from a nonempty overlap; it does not solve a global mosaic graph or correct shadows. `feather_blend` uses caller-supplied weights and premultiplied alpha on common-canvas tiles. Zero-weight pixels stay transparent. Restore authoritative export coverage after stitching when exact coverage is required.
+`translate` zero-fills exposed strips instead of wrapping them. `composite_landscape` selects RGB by a boolean building mask and restores exact alpha. `fit_overlap_gain` fits bounded independent channel gains from a nonempty overlap; it does not solve a global mosaic graph or correct shadows. `feather_blend` takes straight (non-premultiplied) RGBA tiles on a common canvas and weights each pixel's colour by the caller's weight times its alpha, so transparent pixels contribute nothing. Zero-weight pixels stay transparent. Restore authoritative export coverage after stitching when exact coverage is required.
 
 `frame_metrics` defines coverage as retained expected nonzero-alpha pixels divided by expected covered pixels. `ctx_diff` is masked mean absolute RGB difference divided by 255. These are explicit reference metrics; other tools may use different formulas. Choose thresholds on reviewed, authorised examples. Report context flags, coverage flags and execution failures separately. Coverage alone cannot prove alignment.
 
