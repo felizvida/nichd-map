@@ -66,6 +66,7 @@ const screenVertices = mesh.vertices.map(p => view.project(p));
 - [Public source references](public-docs/DATA_SOURCES.md): source roles and attribution.
 - [Reproducibility](public-docs/REPRODUCIBILITY.md): inputs, settings, resume rules and validation.
 - [Publication boundary](public-docs/PUBLICATION.md): exact-file and history review.
+- [Release method](public-docs/RELEASE_METHOD.md): one gated, reproducible release for site deployments, regenerated layers and publication.
 - [Reusable skills](public-skills/README.md): terrain review, guarded painting and methods publication.
 - [Banner provenance](public-docs/BANNER.md): fictional illustration and prompt.
 

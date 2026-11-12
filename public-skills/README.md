@@ -5,5 +5,6 @@ These project-specific skills generalise the engineering workflow. They are fres
 - [terrain-map-review](terrain-map-review/SKILL.md): terrain, geometry and projection consistency.
 - [guarded-map-painting](guarded-map-painting/SKILL.md): spot review, immutable runs and layout-preserving painting.
 - [methods-only-publication](methods-only-publication/SKILL.md): publish methods without local datasets or operational traces.
+- [gated-release](gated-release/SKILL.md): recorded approvals, pinned hashes, drift refusal and a generated review for deployments, regenerated layers and publication.
 
 The skills do not contain provider credentials, a production setup or permission to publish data. Follow the actual user's scope and approval conditions.
