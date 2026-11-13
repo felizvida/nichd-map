@@ -48,6 +48,8 @@ Keep provider access outside the renderer. Normalise coordinate units and timest
 
 ## Release and visual checks
 
+[Ground-level movement and conversations](GROUND_LEVEL.md) documents the routing, swept-contact, forward stopping, fictional-role and conversation modules, with their assumptions and integration checks.
+
 Hash immutable inputs and settings. A frozen artifact should list selected regular files, sizes and hashes; reject traversal and symlinks before packaging. Rebuild and compare bytes before transferring the reviewed artifact. Operational hosts, credentials, environment files and release logs stay private.
 
 [RELEASE_METHOD.md](RELEASE_METHOD.md) describes the full gated release, including the browser capture routine. Browser checks must observe the map draw, not metadata readiness alone. Wait for the intended view, advancing frames, uploaded textures, no pending loads and no errors. Use an isolated foreground page for software-rendered WebGL. Inspect desktop/mobile placement, seams, picking and controls. A non-blank pixel check catches empty captures but cannot replace inspection; fog, snow and lighting affect colour metrics.

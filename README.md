@@ -16,6 +16,9 @@ This is an independent methods reference, not an official NIH/NICHD product or e
 | [projection.mjs](methods/projection.mjs) | Orthographic projection and inverse at a known elevation |
 | [roof.mjs](methods/roof.mjs) | Parametric saddle surface without a site-specific model |
 | [motion.mjs](methods/motion.mjs) | Confirmed-fix animation with old and stale update guards |
+| [ground.mjs](methods/ground.mjs) | Mode-aware routes, ground-relative observer poses, swept box contact and forward stopping caps |
+| [roles.mjs](methods/roles.mjs) | Weighted fictional-role stops and selected conversation briefs |
+| [conversation.mjs](methods/conversation.mjs) | Shared-panel ownership, queued replies, cancellation and brief response budgets |
 | [raster.py](methods/raster.py) | Alignment, semantic compositing, bounded colour gains and overlap blending |
 | [provenance.py](methods/provenance.py) | Immutable settings hashes and selected regular-file manifests |
 
@@ -62,6 +65,7 @@ const screenVertices = mesh.vertices.map(p => view.project(p));
 ## Read the workflow
 
 - [Methods and limits](public-docs/METHODS.md): terrain, geometry, guarded painting, stitching, motion and visual checks.
+- [Ground-level movement and conversations](public-docs/GROUND_LEVEL.md): routing, contact, fictional roles, short replies and touch/HUD review.
 - [Hands-on tutorial](tutorial/README.md) and its [sample data](sample/README.md): three open datasets, their licences and attribution.
 - [Public source references](public-docs/DATA_SOURCES.md): source roles and attribution.
 - [Reproducibility](public-docs/REPRODUCIBILITY.md): inputs, settings, resume rules and validation.
